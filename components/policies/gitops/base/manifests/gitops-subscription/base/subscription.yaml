@@ -10,6 +10,7 @@ spec:
       value: openshift-gitops, gitops
     - name: CONTROLLER_CLUSTER_ROLE
       value: gitops-controller
+    #Follow-up: is DEX config needed still?
     - name: DISABLE_DEX
       value: 'false'
   channel: gitops-1.10
