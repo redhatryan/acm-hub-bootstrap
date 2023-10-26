@@ -6,8 +6,10 @@ metadata:
 spec:
   resourceTrackingMethod: annotation
   applicationSet: {}
-  dex:
-    openShiftOAuth: true
+  sso:
+    provider: dex
+    dex:
+      openShiftOAuth: true
   extraConfig:
     resource.ignoreResourceUpdatesEnabled: 'true'
     resource.customizations.ignoreResourceUpdates.external-secrets.io_ExternalSecret: |
