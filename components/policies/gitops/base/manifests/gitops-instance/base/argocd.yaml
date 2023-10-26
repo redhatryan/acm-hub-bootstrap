@@ -50,12 +50,12 @@ spec:
       return hs
     accounts.admin: apiKey, login
     ui.cssurl: 'https://redhatryan.github.io/cluster-config/themes/{{ fromClusterClaim "gitops" }}/custom-cluster.css'
-    oidc.config: |
-      name: Keycloak
-      issuer: https://sso.ocplab.com/realms/ocplab
-      clientID: argocd
-      clientSecret: $oidc.keycloak.clientSecret
-     requestedScopes: ["openid", "profile", "email", "groups"]
+#    oidc.config: |
+#      name: Keycloak
+#      issuer: https://sso.ocplab.com/realms/ocplab
+#      clientID: argocd
+#      clientSecret: $oidc.keycloak.clientSecret
+#     requestedScopes: ["openid", "profile", "email", "groups"]
   kustomizeBuildOptions: "--enable-helm --enable-alpha-plugins"
   controller:
     resources:
