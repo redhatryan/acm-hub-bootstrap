@@ -6,6 +6,13 @@ metadata:
 spec:
   resourceTrackingMethod: annotation
   applicationSet: {}
+  dex:
+    openShiftOAuth: true
+  rbac:
+    defaultPolicy: 'role:readonly'
+    policy: |
+      g, system:cluster-admins, role:admin
+    scopes: '[groups]'
   extraConfig:
     resource.ignoreResourceUpdatesEnabled: 'true'
     resource.customizations.ignoreResourceUpdates.external-secrets.io_ExternalSecret: |
