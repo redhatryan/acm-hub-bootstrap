@@ -17,7 +17,7 @@ metadata:
     feature.open-cluster-management.io/addon-work-manager: available
     gitops: local.hub
     name: local-cluster
-    openshiftVersion: 4.13.9
+    openshiftVersion: 4.13.17
     openshiftVersion-major: "4"
     openshiftVersion-major-minor: "4.13"
     vendor: OpenShift
