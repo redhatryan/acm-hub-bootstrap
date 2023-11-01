@@ -1,2 +1,3 @@
 resources:
-- local-hub.yaml
+- local-acm.yaml
+- local-acs.yaml
