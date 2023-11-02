@@ -1,2 +1,3 @@
 resources:
-- secret-store.yaml
+- cluster-secret-store.yaml
+- doppler-secret.yaml
