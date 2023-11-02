@@ -10,3 +10,6 @@ kustomize build github.com/redhatryan/acs-hub-bootstrap/bootstrap/overlays | oc 
 
 echo "Pause $SLEEP_SECONDS seconds for the creation of the GitOps Cluster..."
 sleep $SLEEP_SECONDS
+
+echo "Labeling cluster with 'gitops: local.home'"
+oc label managedcluster acs-hub acs=local.acs --overwrite=true
