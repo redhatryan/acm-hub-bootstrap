@@ -4,6 +4,11 @@ LANG=C
 SLEEP_SECONDS=30
 
 echo ""
+
+echo "Bootstrap secret"
+
+kustomize build github.com/redhatryan/acm-hub-bootstrap/components/policies/gitops/base/manifests/
+
 echo "Installing ACS GitOps Cluster."
 
 kustomize build github.com/redhatryan/acs-hub-bootstrap/bootstrap/overlays | oc apply -f -
