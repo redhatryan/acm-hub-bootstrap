@@ -7,7 +7,7 @@ echo ""
 
 echo "Bootstrap secret"
 
-kustomize build bootstrap/secrets/base | oc apply -f -
+kustomize build github.com/redhatryan/acm-hub-bootstrap/bootstrap/secrets/base | oc apply -f -
 kustomize build github.com/redhatryan/acm-hub-bootstrap/components/policies/gitops/base/manifests/eso/base | oc apply -f -
 
 echo "Installing ACS GitOps Cluster."
