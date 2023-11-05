@@ -6,7 +6,7 @@ metadata:
   labels:
     cloud: Other
     cluster.open-cluster-management.io/clusterset: default
-    clusterID: b1085674-076f-4566-9de5-cc18d18a5286
+    clusterID: 2c6e9150-65bc-425e-9196-4330bf6210c3
     feature.open-cluster-management.io/addon-application-manager: available
     feature.open-cluster-management.io/addon-cert-policy-controller: available
     feature.open-cluster-management.io/addon-cluster-proxy: available
