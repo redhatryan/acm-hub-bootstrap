@@ -8,7 +8,8 @@ spec:
   - acs-clusters
   predicates:
   - requiredClusterSelector:
-      matchExpressions:
+      labelSelector:
+        matchExpressions:
         - key: acs-gitops
           operator: Exists
 ---
