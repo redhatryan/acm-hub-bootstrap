@@ -25,4 +25,4 @@ placementRef:
 subjects:
 - apiGroup: policy.open-cluster-management.io
   kind: PolicySet
-  name: gitops
+  name: acs
