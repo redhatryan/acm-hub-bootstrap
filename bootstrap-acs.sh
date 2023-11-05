@@ -11,7 +11,7 @@ echo "Installing policies to bootstrap ACS"
 kustomize build bootstrap/policies/overlays/acs --enable-alpha-plugins | oc apply -f -
 
 echo "Join acs-clusters ManagedClusterSet"
-oc label managedcluster acs-hub cluster.open-cluster-management.io/clusterset=acs-clusters
+oc label managedcluster acs-hub cluster.open-cluster-management.io/clusterset=acs-clusters --overwrite=true
 
 echo "Labeling cluster with 'gitops: local.acs'"
 oc label managedcluster acs-hub acs-gitops=local.acs --overwrite=true
