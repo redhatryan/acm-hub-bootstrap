@@ -13,6 +13,21 @@ spec:
         - key: acs-gitops
           operator: Exists
 ---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: placement-policy-acs-gitops
+  namespace: openshift-gitops
+spec:
+  clusterSets:
+  - default
+  predicates:
+  - requiredClusterSelector:
+      labelSelector:
+        matchExpressions:
+        - key: gitops
+          operator: Exists
+---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
