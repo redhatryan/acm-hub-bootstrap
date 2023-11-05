@@ -3,4 +3,4 @@ kind: ClusterClaim
 metadata:
   name: acs-gitops
 spec:
-  value: acs-hub
+  value: local.acs
