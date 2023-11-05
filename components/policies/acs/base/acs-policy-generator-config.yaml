@@ -6,7 +6,7 @@ policyDefaults:
   namespace: acm-policies
   remediationAction: enforce
 placementBindingDefaults:
-  name: "binding-policy-gitops"
+  name: "binding-policy-acs-gitops"
 policies:
   - name: policy-eso-secret-store-acs
     manifests:
@@ -26,4 +26,4 @@ policySets:
       - policy-acs-gitops-cluster
     generatePolicySetPlacement: false
     placement:
-      name: placement-policy-gitops
+      name: placement-policy-acs-gitops
