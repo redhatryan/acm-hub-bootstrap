@@ -9,7 +9,7 @@ spec:
   predicates:
   - requiredClusterSelector:
       matchExpressions:
-        - key: gitops
+        - key: acs-gitops
           operator: Exists
 ---
 apiVersion: policy.open-cluster-management.io/v1
