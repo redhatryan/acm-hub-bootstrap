@@ -11,11 +11,15 @@ policies:
   - name: policy-eso-secret-store-acs
     manifests:
       - path: manifests/eso/base/
+  - name: policy-acs-bootstrap
+    manifests:
+      - path: manifests/acs-bootstrap/base/
 policySets:
   - name: "acs"
     description: "Policy for bootstrapping ACS cluster with gitops"
     policies:
       - policy-eso-secret-store-acs
+      - policy-acs-bootstrap
     generatePolicySetPlacement: false
     placement:
       name: placement-policy-acs
