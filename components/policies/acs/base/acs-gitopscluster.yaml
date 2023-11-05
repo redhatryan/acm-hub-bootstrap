@@ -1,10 +1,11 @@
 ---
 apiVersion: apps.open-cluster-management.io/v1beta1
 kind: GitOpsCluster
+Namespace: replace
 metadata:
   annotations:
   name: acs-clusters
-  namespace: openshift-gitops
+  namespace: acm-policies
 spec:
   argoServer:
     cluster: local-cluster

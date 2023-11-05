@@ -13,7 +13,7 @@ generators:
 patches:
   - patch: |-
       - op: replace
-        path: /metadata/namespace
+        path: namespace
         value: openshift-gitops
     target:
       group: GitOpsCluster
