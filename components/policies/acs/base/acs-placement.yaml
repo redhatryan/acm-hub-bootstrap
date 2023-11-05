@@ -6,12 +6,6 @@ metadata:
 spec:
   clusterSets:
   - acs-clusters
-  predicates:
-  - requiredClusterSelector:
-      labelSelector:
-        matchExpressions:
-        - key: acs-gitops
-          operator: Exists
 ---
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
