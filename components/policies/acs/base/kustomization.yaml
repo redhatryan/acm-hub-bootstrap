@@ -9,12 +9,3 @@ resources:
 
 generators:
 - acs-policy-generator-config.yaml
-
-patches:
-  - patch: |-
-      - op: replace
-        path: namespace
-        value: openshift-gitops
-    target:
-      group: GitOpsCluster
-      name: acs-clusters

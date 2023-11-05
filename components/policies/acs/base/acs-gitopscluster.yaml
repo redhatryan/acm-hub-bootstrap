@@ -1,7 +1,7 @@
 ---
 apiVersion: apps.open-cluster-management.io/v1beta1
 kind: GitOpsCluster
-Namespace: replace
+namespace: openshift-gitops
 metadata:
   annotations:
   name: acs-clusters
