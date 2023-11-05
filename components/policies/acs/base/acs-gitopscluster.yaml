@@ -3,7 +3,6 @@ apiVersion: apps.open-cluster-management.io/v1beta1
 kind: GitOpsCluster
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "6"
   name: acs-clusters
   namespace: openshift-gitops
 spec:
