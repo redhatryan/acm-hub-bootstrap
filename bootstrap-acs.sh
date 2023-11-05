@@ -5,9 +5,9 @@ SLEEP_SECONDS=30
 
 echo ""
 
-echo "Installing policies and initial secrets"
+echo "Installing policies"
 
-kustomize build bootstrap/secrets/acs/base | oc apply -f -
+#kustomize build bootstrap/secrets/acs/base | oc apply -f -
 kustomize build bootstrap/policies/overlays/acs --enable-alpha-plugins | oc apply -f -
 
 echo "Labeling cluster with 'gitops: local.home'"
