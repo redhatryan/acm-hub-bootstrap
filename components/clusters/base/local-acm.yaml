@@ -14,6 +14,7 @@ metadata:
     feature.open-cluster-management.io/addon-governance-policy-framework: available
     feature.open-cluster-management.io/addon-iam-policy-controller: available
     #feature.open-cluster-management.io/addon-observability-controller: available
+    feature.open-cluster-management.io/addon-search-collector: available
     feature.open-cluster-management.io/addon-work-manager: available
     gitops: local.acm
     name: local-cluster
