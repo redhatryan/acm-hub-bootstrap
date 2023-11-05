@@ -16,6 +16,7 @@ metadata:
     #feature.open-cluster-management.io/addon-observability-controller: available
     feature.open-cluster-management.io/addon-search-collector: available
     feature.open-cluster-management.io/addon-work-manager: available
+    observability: disabled
     gitops: local.acm
     name: local-cluster
     openshiftVersion: 4.14.1
