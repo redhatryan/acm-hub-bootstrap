@@ -10,7 +10,7 @@ spec:
   - requiredClusterSelector:
       labelSelector:
         matchExpressions:
-        - key: acs
+        - key: acs-gitops
           operator: Exists
 ---
 apiVersion: policy.open-cluster-management.io/v1
