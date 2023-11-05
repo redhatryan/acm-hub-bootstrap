@@ -2,7 +2,7 @@ apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
   name: placement-policy-acs
-  namespace: acm-policies
+  namespace: openshift-gitops
 spec:
   clusterSets:
   - acs-clusters
