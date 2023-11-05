@@ -5,16 +5,10 @@ SLEEP_SECONDS=30
 
 echo ""
 
-echo "Bootstrap secret"
+echo "Installing policies and initial secrets"
 
-kustomize build github.com/redhatryan/cluster-config/bootstrap/secrets/base | oc apply -f -
+kustomize build bootstrap/secrets/acs/base | oc apply -f -
+kustomize build bootstrap/policies/overlays/acs --enable-alpha-plugins | oc apply -f -
 
-echo "Installing ACS GitOps Cluster."
-
-kustomize build github.com/redhatryan/acs-hub-bootstrap/bootstrap/overlays | oc apply -f -
-
-echo "Pause $SLEEP_SECONDS seconds for the creation of the GitOps Cluster..."
-sleep $SLEEP_SECONDS
-
-echo "Labeling cluster with 'acs: acs.hub'"
-oc label managedcluster acs-hub acs=acs.hub --overwrite=true
+echo "Labeling cluster with 'gitops: local.home'"
+oc label managedcluster local-cluster acs=acs.hub --overwrite=true
