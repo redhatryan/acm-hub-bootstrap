@@ -26,4 +26,4 @@ policySets:
       - policy-acs-gitops-cluster
     generatePolicySetPlacement: false
     placement:
-      name: placement-policy-acs
+      name: placement-policy-gitops
