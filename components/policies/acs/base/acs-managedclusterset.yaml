@@ -4,3 +4,4 @@ kind: ManagedClusterSet
 metadata:
   annotations:
   name: acs-clusters
+spec: {}
