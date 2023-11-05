@@ -31,10 +31,10 @@ spec:
     automated:
       prune: false
       selfHeal: true
-  ignoreDifferences:
-    - group: argoproj.io
-      kind: Application
-      managedFieldsManagers:
-        - argocd-server
-      jsonPointers:
-        - /spec/syncPolicy/automated
+  #ignoreDifferences:
+  #  - group: argoproj.io
+  #    kind: Application
+  #    managedFieldsManagers:
+  #      - argocd-server
+  #    jsonPointers:
+  #      - /spec/syncPolicy/automated
