@@ -4,7 +4,7 @@ metadata:
   name: acs-cluster-config-bootstrap
   namespace: openshift-gitops
   labels:
-    gitops.ownedBy: cluster-config
+    gitops.ownedBy: acs-cluster-config
 spec:
   generators:
     - clusterDecisionResource:
@@ -23,7 +23,7 @@ spec:
       source:
         repoURL: https://github.com/redhatryan/cluster-config.git
         targetRevision: main
-        path: bootstrap/overlays/acs.hub
+        path: bootstrap/overlays/{{ fromClusterClaim "acs" }}
       destination:
         namespace: openshift-gitops
         server: https://kubernetes.default.svc
