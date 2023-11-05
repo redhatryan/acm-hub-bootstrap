@@ -8,9 +8,9 @@ spec:
   - acs-clusters
   predicates:
   - requiredClusterSelector:
-      labelSelector:
-        matchLabels:
-          acs-gitops: local.acs
+      matchExpressions:
+        - key: gitops
+          operator: Exists
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
