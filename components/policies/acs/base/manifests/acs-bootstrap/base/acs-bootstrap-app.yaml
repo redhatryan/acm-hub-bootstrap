@@ -27,14 +27,14 @@ spec:
       destination:
         namespace: openshift-gitops
         server: https://kubernetes.default.svc
-  syncPolicy:
-    automated:
-      prune: false
-      selfHeal: true
-  #ignoreDifferences:
-  #  - group: argoproj.io
-  #    kind: Application
-  #    managedFieldsManagers:
-  #      - argocd-server
-  #    jsonPointers:
-  #      - /spec/syncPolicy/automated
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
+      ignoreDifferences:
+        - group: argoproj.io
+          kind: Application
+          managedFieldsManagers:
+            - argocd-server
+          jsonPointers:
+            - /spec/syncPolicy/automated
