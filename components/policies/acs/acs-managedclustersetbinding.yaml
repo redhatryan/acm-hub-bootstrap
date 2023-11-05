@@ -1,0 +1,7 @@
+apiVersion: cluster.open-cluster-management.io/v1beta2
+kind: ManagedClusterSetBinding
+metadata:
+  name: acs-clusters
+  namespace: acm-policies
+spec:
+  clusterSet: acs-clusters

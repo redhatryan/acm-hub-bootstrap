@@ -1,0 +1,28 @@
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: placement-policy-acs
+  namespace: acm-policies
+spec:
+  clusterSets:
+  - acs-clusters
+  predicates:
+  - requiredClusterSelector:
+      labelSelector:
+        matchExpressions:
+        - key: acs
+          operator: Exists
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: binding-policy-acs
+  namespace: acm-policies
+placementRef:
+  apiGroup: cluster.open-cluster-management.io
+  kind: Placement
+  name: placement-policy-acs
+subjects:
+- apiGroup: policy.open-cluster-management.io
+  kind: PolicySet
+  name: acs
