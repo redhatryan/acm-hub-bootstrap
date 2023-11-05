@@ -6,7 +6,7 @@ policyDefaults:
   namespace: acm-policies
   remediationAction: enforce
 placementBindingDefaults:
-  name: "binding-policy-acs"
+  name: "binding-policy-gitops"
 policies:
   - name: policy-eso-secret-store-acs
     manifests:
