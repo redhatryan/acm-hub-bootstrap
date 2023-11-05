@@ -5,6 +5,7 @@ resources:
 - acs-managedclustersetbinding.yaml
 - acs-managedclusterset.yaml
 - acs-gitopscluster.yaml
+- acs-managedcluster-cr.yaml
 
 generators:
 - acs-policy-generator-config.yaml
