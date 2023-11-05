@@ -23,7 +23,8 @@ spec:
       source:
         repoURL: https://github.com/redhatryan/cluster-config.git
         targetRevision: main
-        path: bootstrap/overlays/{{ fromClusterClaim "acs-gitops" }}
+        path: bootstrap/overlays/local.acs
+        #path: bootstrap/overlays/{{ fromClusterClaim "acs-gitops" }}
       destination:
         namespace: openshift-gitops
         server: https://kubernetes.default.svc
