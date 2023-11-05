@@ -15,7 +15,7 @@ policies:
     manifests:
       - path: manifests/acs-bootstrap/base/
   - name: policy-acs-gitops-cluster
-      - path: manifests/gitops-cluster/
+      - path: manifests/gitops-cluster/base
 policySets:
   - name: "acs"
     description: "Policy for bootstrapping ACS cluster with gitops"
