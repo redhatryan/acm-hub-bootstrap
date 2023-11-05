@@ -1,0 +1,46 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: acs-cluster-config-bootstrap
+  namespace: openshift-gitops
+  labels:
+    gitops.ownedBy: acs-cluster-config
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: in-cluster
+        url: https://kubernetes.default.svc
+  #generators:
+  #  - clusterDecisionResource:
+  #      configMapRef: acm-placement
+  #      labelSelector:
+  #        matchLabels:
+  #          cluster.open-cluster-management.io/placement: acs-clusters
+  #      requeueAfterSeconds: 180
+  template:
+    metadata:
+      name: acs-cluster-config
+    #  labels:
+    #    velero.io/exclude-from-backup: "true"
+    spec:
+      project: acs-cluster-config
+      source:
+        repoURL: https://github.com/redhatryan/cluster-config.git
+        targetRevision: main
+        path: bootstrap/overlays/local.acs
+        #path: bootstrap/overlays/{{ fromClusterClaim "acs-gitops" }}
+      destination:
+        namespace: openshift-gitops
+        server: https://kubernetes.default.svc
+      syncPolicy:
+        automated:
+          prune: false
+          selfHeal: true
+      ignoreDifferences:
+        - group: argoproj.io
+          kind: Application
+          managedFieldsManagers:
+            - argocd-server
+          jsonPointers:
+            - /spec/syncPolicy/automated
