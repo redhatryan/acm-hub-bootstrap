@@ -21,12 +21,6 @@ policies:
   - name: policy-gitops-bootstrap
     manifests:
       - path: manifests/gitops-bootstrap/base/
- # - name: policy-gitops-notifications
- #   remediationAction: enforce
- #   manifests:
- #     - path: manifests/gitops-notifications/base/
- #   configurationPolicyAnnotations:
- #     policy.open-cluster-management.io/disable-templates: "true"
 policySets:
   - name: "gitops"
     description: "Policy for bootstrapping cluster with gitops"
@@ -35,7 +29,6 @@ policySets:
       - policy-gitops-subscription
       - policy-gitops-instance
       - policy-gitops-bootstrap
-   #   - policy-gitops-notifications
     generatePolicySetPlacement: false
     placement:
       name: placement-policy-gitops
