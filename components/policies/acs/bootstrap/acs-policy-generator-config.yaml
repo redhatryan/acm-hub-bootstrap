@@ -3,7 +3,7 @@ kind: PolicyGenerator
 metadata:
   name: acs-bootstrap-policy-generator
 policyDefaults:
-  namespace: openshift-gitops
+  namespace: acm-policies
   remediationAction: enforce
 placementBindingDefaults:
   name: "binding-policy-acs-bootstrap"
