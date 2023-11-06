@@ -1,4 +1,3 @@
----
 apiVersion: cluster.open-cluster-management.io/v1beta1
 kind: Placement
 metadata:
@@ -8,13 +7,13 @@ spec:
   clusterSets:
   - acs-clusters
   predicates:
-  - requiredClusterSelector:
-      labelSelector:
-        matchExpressions:
-          - key: acs-gitops
-            operator: In
-            values:
-              - local.acs
+    - requiredClusterSelector:
+        labelSelector:
+          matchExpressions:
+            - key: acs-gitops
+              operator: In
+              values:
+                - local.acs
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
