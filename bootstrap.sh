@@ -38,9 +38,9 @@ kustomize build bootstrap/policies/overlays/default --enable-alpha-plugins | oc 
 echo "Labeling cluster with 'gitops: local.acm'"
 oc label managedcluster local-cluster gitops=local.acm --overwrite=true
 
-echo "Update DNS (permanent solution coming soon)"
+#echo "Update DNS (permanent solution coming soon)"
 
-kustomize build github.com/redhatryan/cluster-config/components/dns | oc apply -f -
+#kustomize build github.com/redhatryan/cluster-config/components/dns | oc apply -f -
 
 echo "Check policy compliance with the following command:"
 echo "  oc get policy -A"
