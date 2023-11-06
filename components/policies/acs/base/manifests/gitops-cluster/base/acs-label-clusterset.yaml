@@ -4,3 +4,7 @@ metadata:
   labels:
     cluster.open-cluster-management.io/clusterset: acs-clusters
   name: acs-hub
+status:
+  clusterClaims:
+    - name: acs-gitops
+      value: local.acs
