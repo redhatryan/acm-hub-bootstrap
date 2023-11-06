@@ -55,4 +55,7 @@ spec:
       type: ManagedClusterConditionAvailable
   clusterSelector:
     matchExpressions:
-      - { key: acs-gitops, operator: In, values: local.acs }
+      - key: acs-gitops
+        operator: In
+        values: 
+        - local.acs
