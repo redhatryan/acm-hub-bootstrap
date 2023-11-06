@@ -27,19 +27,3 @@ subjects:
 - apiGroup: policy.open-cluster-management.io
   kind: PolicySet
   name: acs-gitops
-
-#apiVersion: apps.open-cluster-management.io/v1
-#kind: PlacementRule
-#metadata:
-#  name: placement-policy-config-gitops-cluster
-#  namespace: acm-policies
-#spec:
-#  clusterConditions:
-#    - status: 'true'
-#      type: ManagedClusterConditionAvailable
-#  clusterSelector:
-#    matchExpressions:
-#      - key: acs-gitops
-#        operator: In
-#        values: 
-#        - local.acs
