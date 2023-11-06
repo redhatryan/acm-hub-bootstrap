@@ -1,7 +1,0 @@
-namespace: openshift-gitops
-
-resources:
-- acs-placement.yaml
-
-generators:
-- acs-policy-generator-config.yaml

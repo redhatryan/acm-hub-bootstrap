@@ -1,4 +1,0 @@
-namespace: openshift-gitops
-
-resources:
-- ../../../../../components/policies/acs/bootstrap

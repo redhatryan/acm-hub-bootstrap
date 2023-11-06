@@ -1,6 +1,0 @@
-apiVersion: cluster.open-cluster-management.io/v1alpha1
-kind: ClusterClaim
-metadata:
-  name: acs-gitops
-spec:
-  value: local.acs

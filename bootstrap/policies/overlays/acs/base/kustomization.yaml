@@ -1,5 +1,0 @@
-namespace: acm-policies
-
-resources:
-- ../../../../../components/policies/acs/base
-#- ../../../../components/policies/acs/bootstrap
