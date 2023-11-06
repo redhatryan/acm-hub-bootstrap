@@ -10,7 +10,7 @@ placementBindingDefaults:
 policies:
   - name: policy-eso-secret-store-acs
     manifests:
-      - path: manifests/eso/base/
+      - path: eso/base/
 policySets:
   - name: "acs-bootstrap"
     description: "Policy for bootstrapping ACS cluster with gitops"
