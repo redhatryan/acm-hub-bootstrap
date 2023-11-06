@@ -1,4 +1,4 @@
-namespace: acs-policies
+namespace: openshift-gitops
 
 resources:
 - acs-placement.yaml
