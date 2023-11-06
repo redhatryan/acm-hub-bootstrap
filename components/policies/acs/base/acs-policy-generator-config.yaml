@@ -15,7 +15,6 @@ policies:
     manifests:
       - path: manifests/acs-bootstrap/base/
   - name: policy-acs-gitops-cluster
-    namespace: openshift-gitops
     manifests:
       - path: manifests/gitops-cluster/base
 policySets:
