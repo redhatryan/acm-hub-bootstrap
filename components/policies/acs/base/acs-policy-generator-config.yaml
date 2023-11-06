@@ -21,7 +21,6 @@ policySets:
   - name: "acs-gitops"
     description: "Policy for bootstrapping ACS cluster with gitops"
     policies:
-      - policy-eso-secret-store-acs
       - policy-acs-bootstrap
       - policy-acs-gitops-cluster
     generatePolicySetPlacement: false
