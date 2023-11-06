@@ -6,13 +6,15 @@ metadata:
   namespace: openshift-gitops
 spec:
   clusterSets:
-  - global
+    - acs-clusters
   predicates:
-  - requiredClusterSelector:
-      labelSelector:
-        matchExpressions:
-        - key: gitops
-          operator: Exists
+    - requiredClusterSelector:
+        labelSelector:
+          matchExpressions:
+            - key: acs-gitops
+              operator: In
+              values:
+                - local.acs
 ---
 apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
