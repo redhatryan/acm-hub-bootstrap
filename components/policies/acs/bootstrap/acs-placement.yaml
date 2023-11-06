@@ -1,0 +1,23 @@
+---
+apiVersion: cluster.open-cluster-management.io/v1beta1
+kind: Placement
+metadata:
+  name: placement-policy-acs-bootstrap
+  namespace: openshift-gitops
+spec:
+  clusterSets:
+  - acs-clusters
+---
+apiVersion: policy.open-cluster-management.io/v1
+kind: PlacementBinding
+metadata:
+  name: binding-policy-acs-bootstrap
+  namespace: acs-policies
+placementRef:
+  apiGroup: cluster.open-cluster-management.io
+  kind: Placement
+  name: placement-policy-acs-bootstrap
+subjects:
+- apiGroup: policy.open-cluster-management.io
+  kind: PolicySet
+  name: acs-bootstrap

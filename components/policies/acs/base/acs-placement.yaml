@@ -18,7 +18,7 @@ apiVersion: policy.open-cluster-management.io/v1
 kind: PlacementBinding
 metadata:
   name: binding-policy-acs-gitops
-  namespace: acm-acs-policies
+  namespace: acm-policies
 placementRef:
   apiGroup: cluster.open-cluster-management.io
   kind: Placement
