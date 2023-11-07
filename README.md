@@ -31,3 +31,5 @@ If you are running a SNO cluster like I am and using the LVM Operator make sure 
 using for storage with it is free. For example, if you are doing a reinstall of the hub (or other cluster), after
 the cluster is provisioned but before you provision Day 2 ops ssh to the cluster and run `lsblk` to make sure
 the device is empty with no partitions.
+
+To do this, run `dd if=/dev/zero of=/dev/sda bs=512 count=1` from the node (chroot /host). If LVM still doesn't detect disks, manually create the `system.devices` file at `/etc/lvm/devices` by adding the drive `lvmdevices --adddev /dev/sda`. Delete LVMCluster and the vg-manager and topolvm-node pods.
