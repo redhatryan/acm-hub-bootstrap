@@ -32,4 +32,6 @@ using for storage with it is free. For example, if you are doing a reinstall of 
 the cluster is provisioned but before you provision Day 2 ops ssh to the cluster and run `lsblk` to make sure
 the device is empty with no partitions.
 
+NOTE: There must be no activity on the disk while the next steps are performed. Disable LVM via GitOps if currently enabled, and then proceed with the below.
+
 To do this, run `dd if=/dev/zero of=/dev/sda bs=512 count=1` from the node (chroot /host). If LVM still doesn't detect disks, manually create the `system.devices` file at `/etc/lvm/devices` by adding the drive `lvmdevices --adddev /dev/sda`. Delete LVMCluster and the vg-manager and topolvm-node pods.
