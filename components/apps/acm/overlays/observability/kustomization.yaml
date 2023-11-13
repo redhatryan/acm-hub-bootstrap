@@ -7,7 +7,7 @@ patches:
   - patch: |-
       - op: replace
         path: /spec/storageConfig/storageClass
-        value: lvms-vg1
+        value: openshift-storage.noobaa.io
       - op: replace
         path: /spec/observabilityAddonSpec/interval
         value: 60
