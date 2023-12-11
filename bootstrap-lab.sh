@@ -38,8 +38,8 @@ kustomize build bootstrap/policies/overlays/default --enable-alpha-plugins | oc 
 echo "Labeling cluster with 'gitops: local.<name>'"
 oc label managedcluster local-cluster gitops=local.lab --overwrite=true
 
-echo "Labeling cluster Master node as Infra to run OCP-GO dedicated"
-oc label node lab node-role.kubernetes.io/infra= --overwrite=true
+echo "Labeling cluster Infra node as Infra to run OCP-GO dedicated"
+oc label node lab-infra node-role.kubernetes.io/infra= --overwrite=true
 
 #echo "Update DNS (permanent solution coming soon)"
 
