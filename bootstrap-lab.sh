@@ -35,7 +35,7 @@ echo "Installing policies and initial secrets"
 kustomize build bootstrap/secrets/base | oc apply -f -
 kustomize build bootstrap/policies/overlays/default --enable-alpha-plugins | oc apply -f -
 
-echo "Labeling cluster with 'gitops: local.acm'"
+echo "Labeling cluster with 'gitops: local.<name>'"
 oc label managedcluster local-cluster gitops=local.lab --overwrite=true
 
 #echo "Update DNS (permanent solution coming soon)"
