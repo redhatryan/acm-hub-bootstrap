@@ -31,7 +31,7 @@ If you are running a SNO cluster like I am and using the LVM Operator make sure 
 
 NOTE: There must be no activity on the disk while the next steps are performed. Disable LVM via GitOps if currently enabled, and then proceed with the below.
 
-To do this, run `dd if=/dev/zero of=/dev/sda bs=512 count=1` from the node (chroot /host). If LVM still doesn't detect disks, manually create the `system.devices` file at `/etc/lvm/devices` by adding the drive `lvmdevices --adddev /dev/sda`. Delete LVMCluster and the vg-manager and topolvm-node pods.
+To do this, run `dd if=/dev/zero of=/dev/sda bs=512 count=34` and `dd if=/dev/zero of=/dev/sda bs=512 count=34 seek=$((`blockdev --getsz /dev/sda` - 34))` from the node (chroot /host). If LVM still doesn't detect disks, manually create the `system.devices` file at `/etc/lvm/devices` by adding the drive `lvmdevices --adddev /dev/sda`. Delete LVMCluster and the vg-manager and topolvm-node pods.
 
 Ref: https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_logical_volumes/limiting-lvm-device-visibility-and-usage_configuring-and-managing-logical-volumes
 
