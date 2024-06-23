@@ -120,6 +120,7 @@ spec:
         memory: 256Mi
   server:
     insecure: true
+    host: lab.etbit.io
     route:
       enabled: true
       tls:
