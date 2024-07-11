@@ -13,7 +13,7 @@ spec:
     #Follow-up: is DEX config needed still?
     - name: DISABLE_DEX
       value: 'false'
-  channel: gitops-1.10
+  channel: gitops-1.13
   installPlanApproval: Automatic
   name: openshift-gitops-operator
   source: redhat-operators
